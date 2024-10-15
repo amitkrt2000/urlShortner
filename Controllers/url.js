@@ -1,4 +1,12 @@
-const shortid = require("shortid");
+let nanoid;
+
+async function loadNanoid() {
+  const { nanoid: importedNanoid } = await import('nanoid');
+  nanoid = importedNanoid;
+}
+
+loadNanoid();
+
 const URL = require("../models/url");
 
 async function handleGenerateNewShortURL(req, res) {
@@ -23,8 +31,8 @@ async function handleGenerateNewShortURL(req, res) {
     return res.render("home", { id: existingURL.shortId, urls: allurls });
   }
 
-  // If URL is new, generate a new shortId
-  const shortID = shortid();
+  // If URL is new, generate a new shortId using nanoid
+  const shortID = nanoid();  // Use nanoid
 
   await URL.create({
     shortId: shortID,
@@ -56,4 +64,3 @@ module.exports = {
   handleGenerateNewShortURL,
   handleGetAnalytics,
 };
-

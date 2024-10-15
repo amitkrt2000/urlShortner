@@ -2,7 +2,7 @@ const express = require("express");
 const {
   handleGenerateNewShortURL,
   handleGetAnalytics,
-} = require("../controllers/url");
+} = require("../Controllers/url");
 
 const router = express.Router();
 
