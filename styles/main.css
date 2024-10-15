@@ -1,0 +1,134 @@
+/* main.css */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* URL input section */
+.url-input-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.url-label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+.url-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.generate-btn {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Generated URL */
+.generated-url {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.generated-url a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.generated-url a:hover {
+    text-decoration: underline;
+}
+
+/* URL analytics section */
+.url-analytics-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.analytics-table th, 
+.analytics-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.analytics-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.analytics-table td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.analytics-table td a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .url-input-section,
+    .url-analytics-section {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .url-input {
+        font-size: 1em;
+    }
+
+    .generate-btn {
+        font-size: 1em;
+    }
+}
